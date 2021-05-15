@@ -69,6 +69,30 @@ function generatePassword(){
       userCHOICES = userchoiceLOWER.concat(userchoiceNumbers, userchoiceSymbols);
       console.log(userCHOICES);
     }   
-             
+// added functions if only 2 are selected
+    else if (userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceUPPER.concat(userchoiceLOWER);
+      console.log(userCHOICES);
+    }
+    else if (userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceUPPER.concat(userchoiceNumbers);
+      console.log(userCHOICES);
+    }
+    else if (userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
+      userCHOICES - userchoiceSymbols.concat(userchoiceSymbols);
+      console.log(userCHOICES);
+    }
+    else if (!userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceLOWER.concat(userchoiceNumbers);
+      console.log(userCHOICES);
+    }
+    else if (!userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
+      userCHOICES = userchoiceLOWER.concat(userchoiceSymbols);
+      console.log(userCHOICES);
+    }
+    else if (!userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
+      userCHOICES = userchoiceNumbers.concat(userchoiceSymbols);
+      console.log(userCHOICES);
+    }
 
 }
