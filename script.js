@@ -38,82 +38,83 @@ function generatePassword(){
      userChoiceLength = prompt ("How many characters? Min-8 characters Max-30 characters");
       if (userChoiceLength < 8 || userChoiceLength > 30){
          alert("Select from 8-30");
+         return;
       }
       else {
         userchoiceUPPER = confirm ("Do you want to include uppercase?");
         userchoiceLOWER = confirm ("Do you want to include lowercase?");
         userchoiceNumbers = confirm ("Do you want to include numbers?");
-        userchoiceSymbols= confirm ("Dp you want to include Symbols?");
+        userchoiceSymbols= confirm ("Do you want to include Symbols?");
       };
 // added functions if none are selected or if all are selected
-     if (!upperCase && !lowerCase && !numbers && !symbols){
+     if (!userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
        userCHOICES = alert("Please select at least 1 option")
      }
-     else if (upperCase && lowerCase && numbers && symbols){
+     else if (userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
        userCHOICES = upperCase.concat(lowerCase, numbers, symbols);
        console.log(userCHOICES);
-    }
+    };
 // added functions if only 3 choices are selected 
-    else if(upperCase && lowerCase && numbers && !symbols) {
+     if (userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols) {
     userCHOICES = upperCase.concat(lowerCase, numbers);
     console.log(userCHOICES);
     }
-    else if (upperCase && lowerCase && !numbers && symbols){
+    else if (userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
       userCHOICES = upperCase.concat(lowerCase, symbols);
     console.log(userCHOICES);
-    }
-    else if (upperCase && !lowerCase && numbers && symbols){
+    };
+     if (userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
       userCHOICES = upperCase.concat(numbers, symbols);
     console.log(userCHOICES);
     }
-    else if (!upperCase && lowerCase && numbers && symbols){
-      userCHOICES = lower.concat(numbers, symbols);
-      console.log(userCHOICES);
-    }   
-// added functions if only 2 are selected
-    else if (upperCase && lowerCase && !numbers && !symbols){
-      userCHOICES = upperCase.concat(lower);
+    else if (!userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
+      userCHOICES = lowerCase.concat(numbers, symbols);
       console.log(userCHOICES);
     }
-    else if (upperCase && !lowerCase && numbers && !symbols){
+// added functions if only 2 are selected
+    else if (userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = upperCase.concat(lowerCase);
+      console.log(userCHOICES);
+    }
+    else if (userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
       userCHOICES = upperCase.concat(numbers);
       console.log(userCHOICES);
     }
-    else if (!upperCase && !lowerCase && numbers && symbols){
+    else if (!userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
       userCHOICES - numbers.concat(symbols);
       console.log(userCHOICES);
     }
-    else if (!upperCase && lowerCase && numbers && !symbols){
+    else if (!userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
       userCHOICES = lowerCase.concat(numbers);
       console.log(userCHOICES);
     }
-    else if (!upperCase && lowerCase && !numbers && symbols){
+    else if (!userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
       userCHOICES = lowerCase.concat(symbols);
       console.log(userCHOICES);
     }
-    else if (upperCase && !lowerCase && !numbers && symbols){
+    else if (userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
       userCHOICES = upperCase.concat(symbols);
       console.log(userCHOICES);
     }
 // added functions for only 1 selected
-    else if (upperCase && !lowerCase && !numbers && !symbols){
+    else if (userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
       userCHOICES = upperCase;
       console.log (userCHOICES);
     }
-    else if (!upperCase && lowerCase && !numbers && !symbols){
+     else if (!userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
       userCHOICES = lowerCase;
       console.log(userCHOICES)
     }
-    else if (!upperCase && !lowerCase && numbers && !symbols){
+     else if (!userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
       userCHOICES = numbers;
       console.log(userCHOICES);
     }
-    else if (!upperCase && !lowerCase && !numbers && symbols){
+     else if (!userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
       userCHOICES = symbols;
       console.log(userCHOICES)
-    };
+    }
   
-
+// added functions to push password into text area 
   var blankpassword = [];
 
 for (var i = 0; i < userChoiceLength; i++){
