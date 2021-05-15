@@ -94,5 +94,21 @@ function generatePassword(){
       userCHOICES = userchoiceNumbers.concat(userchoiceSymbols);
       console.log(userCHOICES);
     }
-
+// added functions for only 1 selected
+    else if (userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceUPPER;
+      console.log (userCHOICES);
+    }
+    else if (!userchoiceUPPER && userchoiceLOWER && !userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceLOWER;
+      console.log(userCHOICES)
+    }
+    else if (!userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
+      userCHOICES = userchoiceNumbers;
+      console.log(userCHOICES);
+    }
+    else if (!userchoiceUPPER && !userchoiceLOWER && !userchoiceNumbers && userchoiceSymbols){
+      userCHOICES = userchoiceSymbols;
+      console.log(userCHOICES)
+ 
 }
