@@ -35,9 +35,9 @@ var userCHOICES;
 
 // added a couple prompt questions 
 function generatePassword(){
-     userChoiceLength = prompt ("How many characters? Min-8 characters Max-30 characters");
-      if (userChoiceLength < 8 || userChoiceLength > 30){
-         alert("Select from 8-30");
+     userChoiceLength = prompt ("How many characters? Min-8 characters Max-128 characters");
+      if (userChoiceLength < 8 || userChoiceLength > 128){
+         alert("Select from 8-128");
          return;
       }
       else {
