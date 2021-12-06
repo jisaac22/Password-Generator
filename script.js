@@ -81,7 +81,7 @@ function generatePassword(){
       console.log(userCHOICES);
     }
     else if (!userchoiceUPPER && !userchoiceLOWER && userchoiceNumbers && userchoiceSymbols){
-      userCHOICES - numbers.concat(symbols);
+      userCHOICES = numbers.concat(symbols);
       console.log(userCHOICES);
     }
     else if (!userchoiceUPPER && userchoiceLOWER && userchoiceNumbers && !userchoiceSymbols){
